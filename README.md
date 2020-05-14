@@ -55,15 +55,15 @@ x- In `src`, create a new folder named `contexts`, this folder is going to be us
 
 x- Inside that folder create a new file named `ProductContext.js`
 
-- In this file, import the `createContext` function from the react library and create our `ProductContext`.
+x- In this file, import the `createContext` function from the react library and create our `ProductContext`.
 
 **STEP 3 - Providing data with ProductContext**
 
-- Now that we've created our `ProductContext` we can import into our `App.js`. Now we can start providing data across our application!
+x- Now that we've created our `ProductContext` we can import into our `App.js`. Now we can start providing data across our application!
 
-- Wrap all of your components/routes in `App.js` inside of `ProductContext.Provider` component.
+x- Wrap all of your components/routes in `App.js` inside of `ProductContext.Provider` component.
 
-- Next pass a value prop to your `Provider`.
+x- Next pass a value prop to your `Provider`.
 
 - In the value prop we'll pass in the products state, and an addItem function that will allow us to add books to the cart.
 
