@@ -9,6 +9,7 @@ import ShoppingCart from "./components/ShoppingCart";
 
 // context
 import { ProductContext } from "./contexts/ProductContext";
+import { CartContext } from "./contexts/CartContext";
 
 function App() {
   const [products] = useState(data);
@@ -30,11 +31,11 @@ function App() {
         </Route>
       </ProductContext.Provider>
 
-      <ProductContext.Provider value={cart}>
+      <CartContext.Provider value={cart}>
         <Route path="/cart">
           <ShoppingCart />
         </Route>
-      </ProductContext.Provider>
+      </CartContext.Provider>
     </div>
   );
 }
