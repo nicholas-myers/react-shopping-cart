@@ -15,18 +15,19 @@ function App() {
   const [products] = useState(data);
   const [cart, setCart] = useState([]);
 
-  const addItem = (item) => {
+  const addItem = (product) => {
     // add the given item to the cart
-    setCart([...cart, item]);
+    if (!cart.includes(product)) {
+      setCart([...cart, product])
+    }
   };
 
   const removeItem = (cartItem) => {
     //   console.log(cartItem)
-    const newCart = cart.filter(item => {
+    const newCart = cart.filter((item) => {
       if (item.id !== cartItem.id) {
         return item;
       }
-      
     });
     setCart(newCart);
     console.log(newCart);
